@@ -183,6 +183,8 @@ func (a *APIController) apiApply(request *APIRequest, ctx *command.Context) (*co
 			}
 		}
 
+		cmd.ApplyRequirements = []string{}
+
 		res := a.ProjectApplyCommandRunner.Apply(cmd)
 		projectResults = append(projectResults, res)
 
